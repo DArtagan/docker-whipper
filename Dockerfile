@@ -57,7 +57,10 @@ RUN apk add --no-cache \
  && python setup.py install \
  && cd / \
  && rm -r whipper \
- && apk del build-dependencies
+ && apk del build-dependencies \
+ && mkdir rips
+
+WORKDIR /rips
 
 ENTRYPOINT []
 
