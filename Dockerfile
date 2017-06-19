@@ -10,6 +10,7 @@ RUN apk add --no-cache \
     ca-certificates \
     cdparanoia \
     flac \
+    libcdio \
     libsndfile \
     py-gobject \
     py-mutagen \
@@ -62,6 +63,6 @@ RUN apk add --no-cache \
 
 WORKDIR /rips
 
-ENTRYPOINT []
+#ENTRYPOINT 'whipper'
 
-CMD ['whipper']
+#CMD ['cd', 'rip']
